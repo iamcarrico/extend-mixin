@@ -1,0 +1,330 @@
+/**
+ * Default theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+@import url(http://iamcarrico.github.io/fonts/pt.css);
+@import url(http://iamcarrico.github.io/fonts/newcicle.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 2.25em;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  html .reveal h1 {
+    font-size: 2em;
+  }
+  html .reveal h2 {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 601px) and (max-width: 888px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+* {
+  text-rendering: optimizeLegibility;
+}
+
+.reveal blockquote {
+  border: none;
+  box-shadow: none;
+  text-align: right;
+  background: none;
+  border-right: .2em solid;
+  padding: 0 1em 0 0;
+}
+.reveal blockquote cite {
+  font-size: .75em;
+  font-weight: bold;
+}
+.reveal ul {
+  margin-bottom: 1em;
+}
+.reveal a {
+  color: inherit;
+  text-decoration: none;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
+  font-family: "New Cicle", Arial, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.reveal h1 a, .reveal h2 a, .reveal h3 a, .reveal h4 a, .reveal h5 a {
+  background-position: 0 0.825em !important;
+}
+.reveal h1, .reveal h2 {
+  margin-bottom: .25em;
+}
+.reveal pre {
+  font-size: 1em;
+}
+.reveal pre.codemark {
+  box-shadow: none;
+  font-size: .55em;
+}
+.reveal p {
+  margin-bottom: .75em;
+}
+.reveal .slides-link {
+  font-size: 2.5em;
+  margin-top: .5em;
+}
+.reveal .attribution {
+  color: white;
+  font-size: 0.4em;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 31em;
+}
+.reveal .drupal {
+  background: url("http://iamcarrico.github.io/content-to-phone-in-1000ms/images/druplicon.png") no-repeat;
+  font-style: italic;
+  margin-top: 1em;
+  padding: .3em .3em .3em 2em;
+  background-size: contain;
+  display: inline-block;
+}
+
+.intro .reveal .controls div.navigate-left {
+  border-right-color: white;
+}
+.spdy .reveal .controls div.navigate-left {
+  border-right-color: black;
+}
+.bundler .reveal .controls div.navigate-left {
+  border-right-color: black;
+}
+.north .reveal .controls div.navigate-left {
+  border-right-color: #061b25;
+}
+.speed-racer .reveal .controls div.navigate-left {
+  border-right-color: black;
+}
+.intro .reveal .controls div.navigate-right {
+  border-left-color: white;
+}
+.spdy .reveal .controls div.navigate-right {
+  border-left-color: black;
+}
+.bundler .reveal .controls div.navigate-right {
+  border-left-color: black;
+}
+.north .reveal .controls div.navigate-right {
+  border-left-color: #061b25;
+}
+.speed-racer .reveal .controls div.navigate-right {
+  border-left-color: black;
+}
+.intro .reveal .controls div.navigate-up {
+  border-bottom-color: white;
+}
+.spdy .reveal .controls div.navigate-up {
+  border-bottom-color: black;
+}
+.bundler .reveal .controls div.navigate-up {
+  border-bottom-color: black;
+}
+.north .reveal .controls div.navigate-up {
+  border-bottom-color: #061b25;
+}
+.speed-racer .reveal .controls div.navigate-up {
+  border-bottom-color: black;
+}
+.intro .reveal .controls div.navigate-down {
+  border-top-color: white;
+}
+.spdy .reveal .controls div.navigate-down {
+  border-top-color: black;
+}
+.bundler .reveal .controls div.navigate-down {
+  border-top-color: black;
+}
+.north .reveal .controls div.navigate-down {
+  border-top-color: #061b25;
+}
+.speed-racer .reveal .controls div.navigate-down {
+  border-top-color: black;
+}
+
+.alert .reveal .state-background {
+  background-color: #c8321e;
+}
+.guidelines .state-background, .render .state-background {
+  background-color: #97e52d;
+}
+.intro .state-background {
+  background-color: black;
+}
+.testing .state-background {
+  background-color: #2f2f2f;
+}
+.spdy .state-background {
+  background-color: #f7fafc;
+}
+.tcp .state-background {
+  background-color: #00944A;
+}
+.casestudy .state-background {
+  background-color: #2090b4;
+}
+.responsibilty .state-background {
+  background-color: #FF9525;
+}
+.wrap-up .state-background {
+  background-color: #EC1931;
+}
+
+[data-state="sassy"],
+[data-state="testing"],
+[data-state="intro"],
+[data-state="alert"] {
+  color: white;
+}
+
+#pirates h2 {
+  color: white;
+  margin-top: 4.3em;
+  font-size: 1.9em;
+  background: rgba(0, 0, 0, 0.5);
+  padding: .3em;
+}
+
+#testing h2 {
+  color: white;
+  margin-top: 2.9em;
+}
+@media (min-width: 1100px) {
+  #testing h2 {
+    margin-top: 3.4px;
+  }
+}
+
+#houston h2 {
+  color: white;
+  font-size: 1.7em;
+  margin-top: 4.4em;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: .3em;
+}
+@media (min-width: 1032px) {
+  #houston h2 {
+    margin-top: 5.4em;
+  }
+}
+@media (min-width: 1032px) and (min-height: 722px) {
+  #houston h2 {
+    margin-top: 6.5em;
+  }
+}
+
+.reveal .roundtrip {
+  font-size: 85%;
+}
+.reveal .roundtrip .row {
+  background-color: white;
+  height: 16.66667%;
+  border-bottom: 1px grey solid;
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+}
+.reveal .roundtrip .row:first-child {
+  font-weight: bold;
+  background-color: grey;
+}
+.reveal .roundtrip .row:last-child {
+  color: green;
+  background-color: #b3b3b3 !important;
+}
+.reveal .roundtrip .column {
+  width: 25%;
+  float: left;
+}
+.reveal .roundtrip .column:first-child .row {
+  font-weight: bold;
+  background-color: grey;
+  border-bottom: black solid 1px;
+  border-left: none;
+}
+.reveal .roundtrip .column:first-child .row:first-child {
+  background-color: transparent;
+  border: 0px solid;
+}

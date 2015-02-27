@@ -1,0 +1,331 @@
+/**
+ * Default theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+////////////////////////////
+// Cross Browser Support
+$graceful-usage-threshold: 100;
+$critical-usage-threshold: 100;
+
+$browser-minimum-versions: (
+  "ie": "9",
+  "android": "4",
+  "chrome": "31",
+  "safari": "5",
+  "firefox": "25",
+  "ios-safari": "6.0-6.1",
+  "android-chrome": "36"
+);
+////////////////////////////
+
+////////////////////////
+// Compass Imports
+@import "compass";
+@import "compass/reset";
+////////////////////////
+
+////////////////////////
+// Compass Extensions
+@import "toolkit";
+@import "toolkit/kickstart";
+// @import "breakpoint";
+////////////////////////
+
+
+// Default mixins and settings -----------------
+@import "../bower_components/reveal.js/css/theme/template/mixins";
+@import "../bower_components/reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+// Grab me some fonts.
+@import url(http://iamcarrico.github.io/fonts/pt.css);
+@import url(http://iamcarrico.github.io/fonts/newcicle.css);
+
+
+$newcicle: 'New Cicle', Arial, sans-serif;
+$pt: 'PT Sans', Helvetica, Arial, sans-serif;
+
+.clearfix {
+  @include clearfix;
+}
+
+body {
+  font-family: $pt;
+  font-size: 2.25em;
+}
+
+// A few overrides so that mobile phones can see it too.
+html {
+  @media (max-width: 600px) {
+    font-size: 50%;
+
+    .reveal {
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.6em;
+      }
+    }
+  }
+
+  @media (min-width: 601px) and  (max-width: 888px) {
+    font-size: 75%;
+  }
+}
+
+* {
+  text-rendering: optimizeLegibility;
+}
+
+
+.reveal {
+  blockquote {
+    border: none;
+    box-shadow: none;
+    text-align: right;
+    background: none;
+    border-right: .2em solid;
+    padding: 0 1em 0 0;
+
+    cite {
+      font-size: .75em;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+  h1, h2, h3, h4, h5  {
+    font-family: $newcicle;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: normal;
+
+
+    a {
+      background-position: 0 0.825em !important;
+    }
+
+  }
+
+  h1, h2 {
+    margin-bottom: .25em;
+  }
+
+  pre {
+    font-size: 1em;
+
+    &.codemark {
+      box-shadow: none;
+      font-size: .55em;
+    }
+  }
+
+  p {
+    margin-bottom: .75em;
+  }
+
+  .slides-link {
+    font-size: 2.5em;
+    margin-top: .5em;
+  }
+
+  .attribution {
+    color: white;
+    font-size: 0.4em;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 31em;
+  }
+
+  .drupal {
+    background: url('http://iamcarrico.github.io/content-to-phone-in-1000ms/images/druplicon.png') no-repeat;
+    font-style: italic;
+    margin-top: 1em;
+    padding: .3em .3em .3em 2em;
+    background-size: contain;
+    display: inline-block;
+
+
+    &:before {
+      //content: "Drupal: "
+    }
+  }
+}
+
+
+.reveal .controls div.navigate {
+  $states: (
+    "intro": white,
+    "spdy": black,
+    "bundler": black,
+    "north": #061b25,
+    "speed-racer": black,
+  );
+
+  $dirs: (
+    left: right,
+    right: left,
+    up: bottom,
+    down: top
+  );
+
+  @each $dir, $border in $dirs {
+    &-#{$dir} {
+      @each $state, $color in $states {
+        .#{$state} & {
+          border-#{$border}-color: $color;
+        }
+      }
+    }
+  }
+}
+
+.state-background {
+
+  .alert .reveal & { // Extra class to override reveal.
+    background-color: rgba(200, 50, 30, 1);
+  }
+
+  .guidelines &,
+  .render & {
+    background-color: #97e52d;
+  }
+
+  .intro & {
+    background-color: black;
+  }
+
+  .testing & {
+    background-color: #2f2f2f;
+  }
+
+  .spdy & {
+    background-color: #f7fafc;
+  }
+
+  .tcp & {
+    background-color: #00944A;
+  }
+
+  .casestudy & {
+    background-color: #2090b4;
+  }
+
+  .responsibilty & {
+    background-color: #FF9525;
+  }
+
+  .wrap-up & {
+    background-color: #EC1931;
+  }
+}
+
+[data-state="sassy"],
+[data-state="testing"],
+[data-state="intro"],
+[data-state="alert"]{
+  color: white;
+}
+
+//// Pirates slide
+#pirates {
+  h2 {
+    color: white;
+    margin-top: 4.3em;
+    font-size: 1.9em;
+    background: rgba(0,0,0,0.5);
+    padding: .3em;
+  }
+}
+
+#testing {
+  h2 {
+    color: white;
+    margin-top: 2.9em;
+
+    @media (min-width: 1100px) {
+      margin-top: 3.4px;
+    }
+  }
+}
+
+#houston {
+  h2 {
+    color: white;
+    font-size: 1.7em;
+    margin-top: 4.4em;
+    background-color: rgba(0,0,0,.6);
+    padding: .3em;
+
+    @media (min-width: 1032px) {
+      margin-top: 5.4em;
+
+      @media (min-height: 722px) {
+        margin-top: 6.5em;
+      }
+    }
+  }
+}
+
+
+$roundtrip-background: white;
+$roundtrip-column: black;
+$roundtrip-row: grey;
+$roundtrip-first-col: grey;
+$roundtrip-first-row: grey;
+
+// Special roundtrip section.
+.reveal .roundtrip {
+  font-size: 85%;
+
+  .row {
+    background-color: $roundtrip-background;
+    height: 1/6 * 100%;
+    border: {
+      bottom: 1px $roundtrip-row solid;
+      left: 1px $roundtrip-column solid;
+      right: 1px $roundtrip-column solid;
+    }
+
+    &:first-child {
+      font-weight: bold;
+      background-color: $roundtrip-first-row;
+    }
+
+    &:last-child {
+      color: green;
+      background-color: lighten($roundtrip-first-col, 20%) !important;
+    }
+  }
+
+  .column {
+    width: 25%;
+    float: left;
+
+    &:first-child .row {
+      font-weight: bold;
+      background-color: $roundtrip-first-col;
+      border: {
+        bottom: black solid 1px;
+        left: none;
+      }
+
+      &:first-child {
+        background-color: transparent;
+        border: 0px solid;
+      }
+    }
+  }
+}
